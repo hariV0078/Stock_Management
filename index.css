@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to bottom right, #e0f7fa, #80deea); /* New gradient background */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Changed to flex-start for scrollability */
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+  position: relative; /* Added for positioning pseudo-elements */
+  overflow-y: auto; /* Allow vertical scrolling in the body */
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: none; /* Remove background image */
+  opacity: 0; /* No overlay needed */
+  pointer-events: none; /* Prevent interaction with the overlay */
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  max-height: calc(90vh - 40px); /* Set a maximum height for the container */
+  margin: auto; /* Center the container */
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow-y: auto; /* Enable vertical scrolling within the container */
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
+}
+
+h1, h2 {
+    text-align: center;
+    color: #4A90E2;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: calc(100% - 20px); /* Adjusted for padding */
+    padding: 14px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* More rounded corners */
+    transition: border-color .3s ease, background-color .3s ease;
+}
+
+input:focus {
+    border-color: #4A90E2; 
+    background-color: #f7f9fc; 
+}
+
+button {
+    width: calc(100% - 20px); /* Adjusted for padding */
+    padding:14px;
+    background: linear-gradient(to right, #4A90E2, #357ABD); 
+    color:white;
+    font-size:16px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s ease all;
+    margin-top:10px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #357ABD, #2A6FB0);
+    transform:.02; 
+}
+
+p {
+    text-align:center;
+    color:#555;
+}
+
+.signup-container {
+    display:flex;
+    flex-direction: column; /* Fixed syntax here */
+}
+
+.stock-management {
+   margin-top:30px; 
+}
+
+form {
+   display:flex; 
+   flex-direction:column; 
+   gap:.5rem; 
+}
+
+.stock-table {
+   width :100%; 
+   border-collapse :collapse; 
+   margin :20px ; /* Fixed spacing here */
+   box-shadow :0 px ,2 px ,10 px ,rgba(0 ,0 ,0 ,0.1); 
+}
+
+.stock-table th , .stock-table td {
+   padding :14px ; /* Fixed spacing here */
+   text-align:left ; 
+   border-bottom :1px solid #ddd ; 
+}
+
+.stock-table th {
+   background-color:#4A90E2 ; 
+   color:white ; 
+   text-transform :uppercase ; 
+}
+
+.stock-table tr:nth-child(even) {
+   background-color:#f9f9f9 ; 
+}
+
+.stock-table tr:hover {
+   background-color:#f1f1f1 ; 
+}
+
+.stock-table .actions {
+   display:flex ; 
+   gap :10px ; 
+}
+
+.stock-table .actions button {
+   flex :1 ; 
+   padding :8px ; /* Fixed spacing here */
+   background-color:#4A90E2 ; 
+   border-radius :4px ; 
+   color:white ; 
+   border:none ; 
+   cursor:pointer ; 
+   transition :background-color .3s ease ; 
+}
+
+.stock-table .actions button:hover {
+   background-color:#357ABD ;
+}

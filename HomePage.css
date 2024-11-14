@@ -1,0 +1,188 @@
+/* Base styling for the home page */
+.home-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9; /* Light background similar to the image */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+p{
+  font-size: large;
+}
+.home-page header {
+  display: flex;
+  justify-content: space-between; /* Ensures logout button is at the right edge */
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  width: calc(100% - 40px); /* Adjusted to account for padding */
+  max-width: 1400px; /* Increased max-width for a larger container */
+  margin-bottom: 20px;
+}
+
+.home-page header span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.home-page header .logout-button {
+  background-color: #4A90E2;
+  color: white;
+  padding: 5px 10px; /* Reduced padding for a smaller button */
+  font-size: 14px; /* Adjusted font size for a smaller appearance */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.home-page header .logout-button:hover {
+  background-color: #357ABD;
+}
+.home-page main {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  width: 1000px; /* Adjusted to account for padding */
+  max-width: 2000px; /* Increased max-width for a larger container */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.home-page main h1 {
+  font-size: 24px;
+  color: #4A90E2;
+}
+
+.home-page main p {
+   color: #666; 
+   font-size:16px; 
+   margin-bottom:30px; 
+}
+
+/* Button style for adding new stock */
+.home-page main button {
+   background-color:#4A90E2; 
+   color:white; 
+   border:none; 
+   padding:px; 
+   font-size:px; 
+   border-radius:px; 
+   cursor:pointer; 
+   transition:border-color .3s ease; 
+}
+
+.home-page main button:hover {
+   background-color:#357ABD; 
+}
+
+/* Stock Table Styles */
+.stock-table {
+   width:100%; 
+   border-collapse:collapse; 
+   margin-top:px; 
+   border-radius:px; 
+   overflow:hidden; /* Ensures rounded corners for table */ 
+   box-shadow:px rgba(0,0,0,.05); 
+}
+
+.stock-table thead {
+   background-color:#4A90E2; 
+   color:white; 
+}
+
+.stock-table th, .stock-table td {
+   padding:px; 
+   text-align:left; 
+}
+
+.stock-table th {
+   text-transform:uppercase; 
+   letter-spacing:.05em; 
+}
+
+.stock-table tbody tr:nth-child(odd) {
+   background-color:#f9f9f9; 
+}
+
+.stock-table tbody tr:nth-child(even) {
+   background-color:#fff; 
+}
+
+.stock-table tbody tr:hover {
+   background-color:#eef5ff; 
+}
+
+.stock-table tbody td {
+   color:#333; 
+}
+
+.stock-table .actions button {
+   background-color:#4A90E2; 
+   color:white; 
+   padding:px; 
+   border-radius:px; 
+   border:none; 
+   cursor:pointer; 
+   transition:border-color .3s ease; 
+   width: fit-content;
+}
+
+.stock-table .actions button:hover {
+   background-color:#357ABD; 
+}
+
+/* Responsive adjustments */
+@media (max-width:768px) {
+    .home-page main {
+        padding:px; /* Adjusted padding for smaller screens */ 
+    }
+
+    .stock-table th, .stock-table td {
+        font-size:px; /* Adjusted font size for smaller screens */ 
+    }
+}
+.add-stock-button {
+   width: fit-content;
+   
+ }
+ 
+ .add-stock-button svg {
+   margin-right: 1px; /* Space between icon and text */
+ }
+ .header-container {
+   display: flex; /* Use flexbox for layout */
+   align-items: center; /* Center items vertically */
+   justify-content: space-between; /* Space between heading and button */
+ }
+ 
+ .add-stock-button {
+   display: inline-flex; /* Aligns icon and text */
+   align-items: center; /* Centers icon vertically */
+   margin-left: 10px; /* Optional: space between heading and button */
+ }/* Delete Button Style */
+.delete-button {
+   margin-left: 15px; /* Space between Edit and Delete buttons */
+   background-color: #E74C3C;
+   color: white;
+   display: inline-flex; /* Aligns icon and text */
+   align-items: center; /* Centers icon vertically */
+   border: none; /* Remove default border */
+   cursor: pointer; /* Change cursor on hover */
+   transition: background-color 0.3s ease; /* Smooth transition */
+   width: fit-content; /* Set width to fit content */
+}
+
+.delete-button:hover {
+   background-color: #C0392B; /* Darker red on hover */
+}
+
+.delete-button svg {
+   margin-right: 5px; /* Space between icon and text */
+}
